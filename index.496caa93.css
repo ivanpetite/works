@@ -1,0 +1,244 @@
+:root {
+  font: size 16px "ApercuProMono";
+}
+
+.menu_main {
+  z-index: 99;
+  height: 20px;
+  position: absolute;
+  top: 20px;
+  bottom: 100%;
+}
+
+.menu_main2 {
+  z-index: 99;
+  height: 20px;
+  position: fixed;
+  top: 20px;
+  bottom: 100%;
+}
+
+.menu_mobile {
+  z-index: 0;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  padding: 0;
+  display: flex;
+  position: sticky;
+  top: 0;
+}
+
+.sticky_mobile {
+  z-index: 0;
+  width: 100%;
+  height: 25px;
+  display: flex;
+  position: fixed;
+  top: 0;
+}
+
+.menu {
+  justify-content: space-between;
+  width: 100%;
+  max-width: 70vw;
+  margin-bottom: 0;
+  font-family: ApercuProMono;
+  font-style: normal;
+  font-weight: 100;
+  display: flex;
+}
+
+.cat {
+  color: #ffe0dc;
+  height: 50px;
+  line-height: 50px;
+}
+
+.cat:hover {
+  color: #ffe0dc;
+  cursor: crosshair;
+}
+
+.cat2 {
+  color: #ffe0dc;
+}
+
+.menu2 {
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 90vw;
+  margin-bottom: 0;
+  font-family: ApercuProMono;
+  font-style: normal;
+  font-weight: 100;
+  display: flex;
+}
+
+.load_main {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.loader_element1 {
+  background-blend-mode: exclusion;
+  z-index: 1;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+  background: #fff url("bg_mobile_min.7f90fb37.gif") 0 0 / cover;
+  width: 101vw;
+  height: 120vh;
+  animation: 1s cubic-bezier(.92, .52, .21, .89) reverse forwards clip1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  overflow: hidden;
+  transform: translate(-50%, -50%);
+}
+
+.texte_loader_center {
+  color: #ffffffb3;
+  align-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "TIMMONS NY 2.0", Arial, Helvetica, sans-serif;
+  font-size: 7rem;
+  animation-name: opacity, transform;
+  animation-duration: 1s, 2s;
+  animation-timing-function: cubic-bezier(.77, .34, .98, .57), cubic-bezier(.48, .37, .09, .5);
+  animation-delay: .1s;
+  animation-fill-mode: forwards;
+  display: flex;
+  position: absolute;
+  transform: translateX(300px);
+}
+
+@keyframes opacity {
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes transform {
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.loader_element2 {
+  box-sizing: border-box;
+  z-index: 2;
+  clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+  background-color: #7d938a;
+  background-size: cover;
+  border: 0 solid #474747;
+  flex-direction: column;
+  justify-content: center;
+  width: 101vw;
+  height: 120vh;
+  animation-name: clip1, borderr;
+  animation-duration: 1s, .5s;
+  animation-timing-function: cubic-bezier(.92, .52, .21, .89), ease-out;
+  animation-iteration-count: 1, 1;
+  animation-direction: reverse, normal;
+  animation-delay: .9s, 1.7s;
+  animation-fill-mode: forwards, forwards;
+  display: flex;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  overflow: hidden;
+  transform: translate(-50%, -50%);
+}
+
+@keyframes clip1 {
+  0% {
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+  }
+
+  10% {
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 10% 100%);
+  }
+
+  100% {
+    clip-path: polygon(100% 0%, 100% 0%, 100% 100%, 100% 100%);
+  }
+}
+
+@keyframes borderr {
+  100% {
+    border: 10px solid #fff;
+  }
+}
+
+.item_center {
+  box-sizing: border-box;
+  color: #ffffffb3;
+  flex-flow: row-reverse;
+  place-content: flex-end center;
+  align-items: center;
+  width: 100%;
+  height: 10vh;
+  margin: 0;
+  padding: 0;
+  font-family: "TIMMONS NY 2.0", Arial, Helvetica, sans-serif;
+  font-size: 4rem;
+  display: inline-flex;
+}
+
+.categorie {
+  transform: translateX(300px);
+}
+
+@keyframes transform {
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.categorie.wrap1 {
+  opacity: 0;
+  animation-name: transform, opacity;
+  animation-duration: 1s, 1s;
+  animation-timing-function: cubic-bezier(0, .87, .55, .97), cubic-bezier(.48, .37, .09, .5);
+  animation-delay: 1.3s;
+  animation-fill-mode: forwards;
+}
+
+.categorie.wrap2 {
+  opacity: 0;
+  animation-name: transform, opacity;
+  animation-duration: 1s, 1s;
+  animation-timing-function: cubic-bezier(0, .87, .55, .97), cubic-bezier(.48, .37, .09, .5);
+  animation-delay: 1.35s;
+  animation-fill-mode: forwards;
+}
+
+.categorie.wrap3 {
+  opacity: 0;
+  animation-name: transform, opacity;
+  animation-duration: 1s, 1s;
+  animation-timing-function: cubic-bezier(0, .87, .55, .97), cubic-bezier(.48, .37, .09, .5);
+  animation-delay: 1.4s;
+  animation-fill-mode: forwards;
+}
+
+.categorie.wrap4 {
+  opacity: 0;
+  animation-name: transform, opacity;
+  animation-duration: 1s, 1s;
+  animation-timing-function: cubic-bezier(0, .87, .55, .97), cubic-bezier(.48, .37, .09, .5);
+  animation-delay: 1.45s;
+  animation-fill-mode: forwards;
+}
+
+/*# sourceMappingURL=index.496caa93.css.map */

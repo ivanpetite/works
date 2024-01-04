@@ -1,0 +1,150 @@
+html.has-scroll-smooth {
+  overflow: hidden;
+}
+
+html.has-scroll-dragging {
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.has-scroll-smooth body {
+  overflow: hidden;
+}
+
+.has-scroll-smooth [data-scroll-container] {
+  width: 100vw;
+  min-height: 100svh;
+  position: fixed;
+  overflow-y: scroll;
+}
+
+[data-scroll-direction="horizontal"] [data-scroll-container], [data-scroll-direction="horizontal"] [data-scroll-section] {
+  white-space: nowrap;
+}
+
+.c-scrollbar {
+  transform-origin: 100%;
+  opacity: 1;
+  width: 11px;
+  height: 100dvh;
+  transition: transform .3s;
+  position: fixed;
+  top: 0;
+  right: 0;
+}
+
+.c-scrollbar:hover {
+  transform: scaleX(1.5);
+}
+
+[data-scroll-direction="horizontal"] .c-scrollbar, [data-scroll-direction="horizontal"] .c-scrollbar:hover {
+  transform: scaleY(1);
+}
+
+.c-scrollbar_thumb {
+  opacity: 1;
+  cursor: grab;
+  background-color: #ffe0dc;
+  width: 4px;
+  margin: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.has-scroll-dragging .c-scrollbar_thumb {
+  cursor: grabbing;
+}
+
+[data-scroll-direction="horizontal"] .c-scrollbar_thumb {
+  right: auto;
+}
+
+[data-scroll-container] {
+  overflow: hidden !important;
+}
+
+.cursor {
+  z-index: 100;
+  contain: layout style size;
+  pointer-events: none;
+  background: #ffe0dc;
+  border-radius: 50%;
+  width: 12px;
+  height: 12px;
+  position: fixed;
+  top: -6px;
+  left: -6px;
+  transform: scale(.2);
+  box-shadow: inset 0 0 0 1px #737373;
+}
+
+.cursor:before {
+  content: "";
+  background: #4d4646;
+  width: 10px;
+  height: 2px;
+  display: block;
+  position: absolute;
+  top: 5px;
+  left: 1px;
+  transform: scale(.3);
+}
+
+.cursor:after {
+  content: "";
+  background: #4d4646;
+  width: 2px;
+  height: 10px;
+  display: block;
+  position: absolute;
+  top: 1px;
+  left: 5px;
+  transform: scale(.3);
+}
+
+.cursor-expand {
+  transform-origin: 0, 0;
+  z-index: 100;
+  contain: layout style size;
+  pointer-events: none;
+  background: #ffe0dc;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  position: fixed;
+  top: -18px;
+  left: -18px;
+  transform: scale(0);
+  box-shadow: inset 0 0 #958482;
+}
+
+.cursor-expand:before {
+  content: "";
+  background: #4d4646;
+  width: 20px;
+  height: 1px;
+  display: block;
+  position: absolute;
+  top: 23.5px;
+  left: 14px;
+  transform: scale(.8);
+}
+
+.cursor-expand:after {
+  content: "";
+  background: #4d4646;
+  width: 1px;
+  height: 20px;
+  display: block;
+  position: absolute;
+  top: 14px;
+  left: 23.5px;
+  transform: scale(.8);
+}
+
+.hero-inner {
+  text-decoration: none;
+}
+
+/*# sourceMappingURL=index.797f97d1.css.map */

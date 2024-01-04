@@ -1,0 +1,344 @@
+.is_really_displayed {
+  box-sizing: border-box;
+  z-index: 10;
+  visibility: visible;
+  opacity: 0;
+  background: linear-gradient(0deg, #1b1b25 20%, #fff0 100%);
+  width: 100vw;
+  height: 50vh;
+  animation: .2s ease-out forwards shareopacity;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+}
+
+@keyframes shareopacity {
+  100% {
+    opacity: 1;
+  }
+}
+
+.main_bg_share {
+  box-sizing: border-box;
+  z-index: 10;
+  visibility: hidden;
+  opacity: 0;
+  background: linear-gradient(0deg, #1b1b25 20%, #fff0 100%);
+  width: 100vw;
+  height: 50dvh;
+  animation: .2s ease-out 60s forwards sharevisible;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+}
+
+@keyframes sharevisible {
+  100% {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.main_share {
+  z-index: 99;
+  background: linear-gradient(152deg, #c1bbb7 0%, #f6f3f1 50%, #e3dedb 100%);
+  border-top: .5px solid #ddd;
+  border-left: .5px solid #ddd;
+  border-right: .5px solid #ddd;
+  border-top-left-radius: .5rem;
+  border-top-right-radius: .5rem;
+  width: calc(100vw - 1rem);
+  height: 200px;
+  display: block;
+  position: fixed;
+  bottom: -2px;
+  left: .5rem;
+}
+
+.main_btn_share {
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+  filter: drop-shadow(0 0 5px #bbb5b945);
+  scrollbar-color: transparent;
+  scrollbar-width: 0px;
+  background-image: url("illu.a28db4b9.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: .5px solid #ebebebe0;
+  border-radius: .5rem;
+  flex-flow: row;
+  justify-content: center;
+  align-items: center;
+  width: calc(100vw - 2rem);
+  height: 130px;
+  padding: .3rem;
+  display: flex;
+  position: absolute;
+  bottom: 20px;
+  overflow: scroll hidden;
+  transform: translate(8px, 8px);
+  box-shadow: inset 0 0 1rem #e2dedb;
+}
+
+.main_btn_share:before {
+  content: "";
+  box-sizing: border-box;
+  z-index: -1;
+  background-position-x: -1px;
+  background-size: 105%;
+  border-top-left-radius: .45rem;
+  border-top-right-radius: .45rem;
+  width: 99.9%;
+  height: 99.9%;
+  position: fixed;
+  bottom: 0;
+  overflow: hidden;
+}
+
+.main_btn_share::-webkit-scrollbar {
+  box-sizing: content-box;
+  height: 0;
+}
+
+.main_btn_share::-webkit-scrollbar-thumb {
+  background: #f2f0ed00;
+}
+
+.btn_share {
+  z-index: 99;
+  mix-blend-mode: luminosity;
+  background-color: #0000;
+  border-radius: .5rem;
+  flex-flow: row;
+  justify-content: space-evenly;
+  align-items: flex-end;
+  width: auto;
+  height: 55px;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  overflow: scroll hidden;
+}
+
+.btn_share::-webkit-scrollbar {
+  display: none;
+}
+
+.btn_share scrollbar-width {
+  display: none;
+}
+
+.share {
+  filter: drop-shadow(0 0 1px #e3e3e340);
+  background-blend-mode: normal;
+  background-color: #fad9d4;
+  background-position: center;
+  background-size: cover;
+  border: 2.5px solid #b6aea9;
+  border-radius: .2rem;
+  width: 50px;
+  height: 50px;
+  transition: background-blend-mode .2s ease-out, opacity, border .2s ease-out;
+}
+
+.btn_close {
+  opacity: .7;
+  background-color: #0000;
+  border: 1px solid #222120;
+  border-radius: 100%;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+  margin: 10px;
+  transition: all .2s ease-out;
+  display: flex;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.btn_close:before {
+  content: "";
+  background-color: #222120;
+  width: 1px;
+  height: 10px;
+  position: absolute;
+  transform: rotate(45deg);
+}
+
+.btn_close:after {
+  content: "";
+  background-color: #222120;
+  width: 10px;
+  height: 1px;
+  position: absolute;
+  transform: rotate(45deg);
+}
+
+.connect {
+  color: #fefefe;
+  z-index: 99;
+  width: 200px;
+  margin: 14px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: .8rem;
+  display: block;
+  position: relative;
+  left: 0;
+}
+
+.share_line {
+  box-sizing: border-box;
+  opacity: .5;
+  background: linear-gradient(45deg, #f0f0f0 65%, #222120 100%);
+  border-radius: 100%;
+  width: calc(100% - 1.5rem);
+  height: 1px;
+  display: block;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.platforms {
+  color: #615f5eab;
+  z-index: 99;
+  justify-content: center;
+  width: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: .7rem;
+  display: inline-flex;
+  position: absolute;
+  transform: translate(0, 1.6rem);
+}
+
+.btn_1 {
+  background-image: url("xiao.fb7fcae5.svg");
+}
+
+.btn_2 {
+  background-image: url("linkdin.1ccdcd4b.svg");
+}
+
+.btn_3 {
+  background-image: url("gmail.fe6aba2c.svg");
+}
+
+.btn_4 {
+  background-image: url("wechat.9518b7f0.svg");
+}
+
+.btn_5 {
+  background-image: url("behance.306474ea.svg");
+}
+
+.btn_6 {
+  background-image: url("tiktok.b872ea04.svg");
+}
+
+.btn_7 {
+  background-image: url("discord.87f6e49d.svg");
+}
+
+.btn_8 {
+  background-image: url("weibo.2c376925.svg");
+}
+
+.btn_9 {
+  background-image: url("pdf.6ecf2272.svg");
+}
+
+@media screen and (width >= 425px) and (width <= 3840px) {
+  .main_btn_share {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .share:hover {
+    background-blend-mode: exclusion;
+    opacity: .8;
+    border: 2.5px solid #2221209c;
+  }
+
+  .btn_close:hover {
+    transform: rotate(-90deg);
+  }
+}
+
+@media screen and (width >= 0) and (width <= 425px) {
+  .share {
+    margin-left: 8px;
+    margin-right: 8px;
+  }
+
+  .btn_share {
+    margin-left: 1rem;
+    padding-right: 1rem;
+    overflow: scroll hidden;
+  }
+}
+
+@media screen and (width >= 426px) and (width <= 767px) {
+  .share {
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+
+  .btn_share {
+    margin-left: 1rem;
+    padding-right: 1rem;
+    overflow: scroll hidden;
+  }
+}
+
+@media screen and (width >= 768px) and (width <= 1023px) {
+  .btn_share {
+    box-sizing: border-box;
+    justify-content: space-evenly;
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+    display: flex;
+    overflow: scroll hidden;
+  }
+}
+
+@media screen and (width >= 1024px) and (width <= 2559px) {
+  .btn_share {
+    box-sizing: border-box;
+    justify-content: space-evenly;
+    width: 100%;
+    padding-left: 20vw;
+    padding-right: 20vw;
+    display: flex;
+    overflow: hidden;
+  }
+}
+
+@media screen and (width >= 2560px) and (width <= 3840px) {
+  .btn_share {
+    box-sizing: border-box;
+    justify-content: space-evenly;
+    width: 100%;
+    padding-left: 32vw;
+    padding-right: 32vw;
+    display: flex;
+    overflow: hidden;
+  }
+}
+
+.share_lien {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/*# sourceMappingURL=index.7cc64bf4.css.map */
