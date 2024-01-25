@@ -1,0 +1,2 @@
+let e,s,t;e=document.querySelector("#btn_close"),s=document.querySelector("#main_share"),t=document.querySelector(".contact_2"),e.addEventListener("click",function(){s.classList.add("is_not_displayed")}),t.addEventListener("click",function(){s.classList.remove("is_not_displayed"),s.classList.remove("main_bg_share"),s.classList.toggle("is_really_displayed")});
+//# sourceMappingURL=index.e5bbb560.js.map
